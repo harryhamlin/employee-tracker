@@ -1,0 +1,28 @@
+const express = require('express');
+const inquirer = require('inquirer');
+// Import and require mysql2
+const mysql = require('mysql2');
+const Static = require(`./lib/static.js`)
+
+const static = new Static
+
+const PORT = process.env.PORT || 3001;
+const app = express();
+
+// Express middleware
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+// Connect to database
+const db = mysql.createConnection(
+    {
+        host: 'localhost',
+        // MySQL username,
+        user: 'root',
+        // MySQL password
+        password: 'root',
+        database: 'employeetr_db'
+    },
+    console.log(`Connected to the database.`)
+)
+module.exports = db
