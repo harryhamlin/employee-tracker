@@ -1,3 +1,4 @@
+// <====== required exports ======>
 const Static = require(`./lib/static`)
 const Dynamic = require(`./lib/dynamic`)
 const Display = require(`./lib/display`)
@@ -6,7 +7,7 @@ const static = new Static
 const dynamic = new Dynamic
 const display = new Display
 
-
+// <====== main function to handle chaining and recursion ======>
 async function main() {
     switch (await static.main()) {
         case ('view all departments'):
@@ -78,6 +79,7 @@ async function main() {
     }
 }
 
+// <====== called main function ======>
 display.titleDisplay()
 main()
 
