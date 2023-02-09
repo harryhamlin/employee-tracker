@@ -30,34 +30,47 @@ async function main() {
                 .then(() => (main()))
             break;
         case ('add an employee'):
+            static.employeeAdd()
+                .then(() => (main()))
             break;
         case ('update an employee role'):
-            dynamic.updateEmployeeRole()
+            static.updateEmployeeRole()
                 .then(() => (main()));
             break;
-        case ('update an employee manager'):
+        case ('update employee manager'):
+            static.updateEmployeeManager()
+                .then(() => (main()));
             break;
         case ('view employees by manager'):
+            dynamic.selectEmployee('select manager')
+            .then((managerSelect) => display.displayByManager(managerSelect))
+            .then(() => (main()))
             break;
         case ('view employees by department'):
+            dynamic.selectDepartment()
+            .then((departmentSelect) => display.displayByDepartment(departmentSelect))
+            .then(() => (main()))
             break;
         case ('delete department'):
             dynamic.selectDepartment()
-                .then((departmentSelect) => dynamic.deleteDepartment(departmentSelect))
+                .then((departmentSelect) => static.deleteDepartment(departmentSelect))
                 .then(() => (main()))
             break;
         case ('delete role'):
             dynamic.selectRole()
-                .then((roleSelect) => dynamic.deleteRole(roleSelect))
+                .then((roleSelect) => static.deleteRole(roleSelect))
                 .then(() => (main()))
             break;
         case ('delete employees'):
             dynamic.selectEmployee()
-                .then((employeeSelect) => dynamic.deleteEmployee(employeeSelect))
+                .then((employeeSelect) => static.deleteEmployee(employeeSelect))
                 .then(() => (console.log('updated')))
                 .then(() => main())
             break;
         case ('view department budget'):
+            dynamic.selectDepartment()
+            .then((departmentSelect) => display.displayDepartmentBudget(departmentSelect))
+            .then(() => (main()))
             break;
         case ('exit'):
             static.exit()
