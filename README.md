@@ -10,8 +10,7 @@ This application allows the user to manage a database of employee information.
 1. [Installation](#installation)
 2. [Usage](#usage)
 3. [Contributing](#contributing)
-4. [Tests](#tests)
-5. [Questions](#questions)
+4. [Questions](#questions)
   
 
 
@@ -22,15 +21,17 @@ To utilize this app, users will need to have mysql CLI interface, the mysql appl
 
 ## Usage
 
+To demonstrate the usage, please consult this demonstration video: <a href="https://youtu.be/QmaMMxaw7Qo">https://youtu.be/QmaMMxaw7Qo</a>
 
+Upon launch, the program launches the following title screen and menu: <img src="./assets/images/launch.jpg"/>
+
+The application utilizes a number of display outputs: <img src="./assets/images/display.jpg">
+
+And dynamic menu outputs: <img src="./assets/images/dynamic_menu.jpg">
 
 ## Contributing
 
 <a href="https://github.com/harryhamlin">github.com/harryhamlin</a>
-
-## Tests
-
-
 
 ## Questions
 
